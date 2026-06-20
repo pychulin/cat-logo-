@@ -1,0 +1,15 @@
+
+
+<h1>Mi Catálogo</h1>
+
+<div>
+  <img src="producto1.jpg" width="300">
+  <h2>Producto 1</h2>
+  <p>$10.000</p>
+</div>
+
+<div>
+  <img src="producto2.jpg" width="300">
+  <h2>Producto 2</h2>
+  <p>$15.000</p>
+</div>
