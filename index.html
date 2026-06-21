@@ -10,38 +10,31 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 </button>
 </header>
 <main class="grid">
-  
-<div class="producto"> <div id="cart"> </div>
+ <div class="producto">
+
 <h2>Sahumerio Sagrada Madre x8</h2>
-<img src="s1.jpg""s2.jpg" width="200">
-<img src="s3.jpg" width="200">
-<img src="s4.jpg" width="200">
-<img src="s5.jpg" width="200">
-<img src="s6.jpg" width="200"> 
-<img src="s7.jpg" width="200"> 
-<img src="s8.jpg" width="200"> 
-<img src="s9.jpg" width="200">
-<img src="s10.jpg" width="200">
-<img src="s11.jpg" width="200">
-<img src="s12.jpg"  width="200">
-<img src="s13.jpg" width="200"> 
-<img src="s14.jpg" width="200">  
+<div class="galeria">
+<button onclick="cambiarImagen(-1)">⬅️</button>
+<img id="imagenSahumerio" src="s1.jpg" width="200">
+<button onclick="cambiarImagen(1)">➡️</button>
+</div>
+<h3 id="nombreAroma">Lavanda</h3>
 <p>Precio: $3000</p>
 <button onclick="addToCart('Sahumerio Sagrada Madre x8', 3000)">
 Agregar al carrito
-</button>
-
-<div class="producto"> <div id="cart"> </div>
+</button></div> 
+<div class="producto">
+const aromas = [{nombre: "Palo Santo",imagen: "s1.jpg"},{nombre: "Palo Santo con Copal",imagen: "s2.jpg"},{nombre: "Palo Santo con Fresias",imagen: "s3.jpg"},{nombre: "Palo Santo con Ruda",imagen: "s4.jpg"}, {nombre: "Palo Santo con Sándalo",imagen: "s5.jpg"} {nombre: "Palo Santo con Violetas",imagen: "s6.jpg"} {nombre: "Palo Santo con Yagra",imagen: "s7.jpg"} {nombre: "Palo Santo con Lavanda",imagen: "s8.jpg"} {nombre: "Palo Santo con Rosas",imagen: "s9.jpg"}{nombre: "Palo Santo con Jazmín",imagen: "s10.jpg"} {nombre: "Palo Santo con Vainilla",imagen: "s11.jpg"}{nombre: "Palo Santo con Mirra",imagen: "s12.jpg"}{nombre: "Palo Santo con Champa",imagen: "s13.jpg"}{nombre: "Palo Santo con Salvia",imagen: "s14.jpg"}
+  
+  
 <h2>Sahumerio Ámbar x20</h2>
-<img src="am1.jpg"width="200">
-<img src="am2.jpg"width="200">
-<img src="am3.jpg"width="200">  
+  
 <p>Precio: $2000</p>
 <button onclick="addToCart('Sahumerio Ámbar x20', 2000)">
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div> 
+<div class="producto"> 
 <h2>Sahumerio Surtido x50</h2>
 <img src="surtido.jpg" width="200">
 <p>Precio: $6000</p>
@@ -49,7 +42,7 @@ Agregar al carrito
 Agregar al carrit0
 </button>
 
-<div class="producto"> <div id="cart"> </div> 
+<div class="producto">  
 <h2>Sahumerio Largo Aroma Fusión x10</h2>
 <img src="largo1.jpg"width="200">
 <img src="largo2.jpg"width="200">
@@ -59,7 +52,7 @@ Agregar al carrit0
 Agregar al carrit0
 </button>
 
- <div class="producto"> <div id="cart"> </div>
+ <div class="producto">
 <h2>Bombita de Defumación Sagrada Madre x4</h2>
 <img src="b1.jpg"width="200">
 <img src="b2.jpg"width="200"> 
@@ -75,7 +68,7 @@ Agregar al carrit0
 Agregar al carrito
 </button> 
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Conitos para Cascada de Humo x100</h2>
 <img src="conito.jpg" width="200"> 
 <p>Precio: $12000</p>
@@ -83,7 +76,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Sahumo Sagrada Madre</h2>
 <img src="sahumo.jpg" width="200">
 <p>Precio: $3500</p>
@@ -91,7 +84,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div> 
+<div class="producto"> 
 <h2>7 Días de Limpieza Sagrada Madre </h2>
 <img src="7.1.jpg" width="200"> 
 <img src="7.2.jpg" width="200">
@@ -100,7 +93,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Palo Santo</h2>
 <img src="PS.jpg" width="200">
 <p>Precio: $3000</p>
@@ -108,7 +101,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Carbón Neutro Sagrada Madre x36 </h2>
 <img src="carbono.jpg" width="200"> 
 <img src="c2.jpg" width="200">
@@ -117,7 +110,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Velitas</h2>
 <img src="velita1.jpg" width="200">
 <img src="velita2.jpg" width="200"> 
@@ -127,7 +120,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div> 
+<div class="producto"> 
 <h2>Velitas de Noche x12 </h2>
 <img src="velitanoche.jpg" width="200">
 <p>Precio: $3500</p>
@@ -135,7 +128,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto"> 
 <h2>Velón de Arcángeles </h2>
 <img src="velon.jpg" width="200">  
 <p>Precio: $12000</p>
@@ -143,7 +136,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto">
 <h2>Rocío Áurico Alquimia </h2>
 <img src="a1.jpg"width="200"> 
 <img src="a2.jpg"width="200"> 
@@ -153,7 +146,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto">
 <h2>Rocío Áurico Buena Energía </h2>
 <img src="pish1.jpg"width="200"> 
 <img src="pish2.jpg" width="200">
@@ -169,7 +162,7 @@ Agregar al carrito
 Agregar al carrito
 </button>
 
-<div class="producto"> <div id="cart"> </div>
+<div class="producto">
 <h2>Aromatizante Aero Soft</h2>
 <img src="aero1.jpg"width="200"> 
 <img src="aero2.jpg"width="200"> 
