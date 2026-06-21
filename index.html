@@ -185,14 +185,13 @@ Vaciar carrito 🗑️
 <button onclick="checkoutInstagram()">
 Finalizar compra por Instagram 📲
 </button>
-<script>
+<style>
 /* ===== CARRITO ===== */
-.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}
+.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
 
 /* ===== FONDO OSCURO (OVERLAY) ===== */
-#overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);display: none;z-index: 998;}#overlay.show {display: block;}
-<style>  
-  
-let cart = JSON.parse(localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}
+#overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);display: none;z-index: 998;}#overlay.show {display: block;} 
+ <script> 
+let cart = JSON.parse (localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}</script>
 
 function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}</script>
