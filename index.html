@@ -176,18 +176,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 cart.splice(index, 1);
 localStorage.setItem("cart", JSON.stringify(cart));
 renderCart();}
-
-renderCart();
 </script>
-function checkoutInstagram() {
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-if (cart.length === 0) {alert("Tu carrito está vacío");return;}
-let message = "Hola! quiero comprar:%0A";
-cart.forEach(item => {
-message += `- ${item.name} $${item.price}%0A`;});
-let total = cart.reduce((acc, item) => acc + item.price, 0);message += `%0ATotal: $${total}`;
-let instagramUser = "TU_USUARIO";
-let url = `https://ig.me/m/${instagramUser}?text=${message}`;
 window.open(url, "_blank");}
 </script>
