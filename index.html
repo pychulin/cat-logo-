@@ -6,7 +6,7 @@ let cart = [];function addToCart(nombre, precio) {cart.push({nombre: nombre,prec
 function toggleCart() {document.getElementById("cart").classList.toggle("open");document.getElementById("overlay").classList.toggle("show");} </script> 
 
 <header class="header">
-<h1>Mi Tienda</h1>}
+<h1>Mi Tienda</h1>
 <h3>Total: $<span id="total">0</span></h3>
 </div>
 <button onclick="toggleCart()" class="cart-btn">
@@ -15,7 +15,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  <div id="carrito">
  <h2>🛒 Carrito</h2>
  <ul id="lista-carrito"> </ul>
-<h3>Total: $<span id="total">0</span></h3>
+<h3>Total: $ </h3>
 </div>
 </header>
 <main class="grid">
@@ -23,9 +23,6 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 
 <h2>Sahumerio Sagrada Madre x8</h2>
 <div class="galeria">
-<button onclick="cambiarImagen(-1)">⬅️</button>
-<img id="Sagrada Madre" src="s1.jpg" width="200">
-<button onclick="cambiarImagen(1)">➡️</button>
 <p>Precio: $3000</p>
 <label for="aroma">Elegí tu aroma:</label>
 <select id="aroma">
@@ -44,17 +41,13 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 <option>Palo Santo con Champa</option> 
  <option>Palo Santo con Salvia</option>
 </select>  
-<button onclick="agregarSahumerio()">
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
   
 <h2>Sahumerio Ámbar x20</h2>
 <div class="galeria">
-<button onclick="cambiarImagen(-1)">⬅️</button>
-<img id="Ámbar" src="am1.jpg" width="200">
-<button onclick="cambiarImagen(1)">➡️</button>  
  <label for="aroma">Elegí tu aroma:</label>
 <select id="Ámbar">
   <option> Mirra</option> </option>
@@ -62,11 +55,10 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
   <option> Sándalo Canela</option>
 <p>Precio: $2000</p>
 </select>  
-<button onclick="agregarSahumerio()">
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Sahumerio Surtido x50</h2>
@@ -76,25 +68,21 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto">  
 <h2>Sahumerio Largo Aroma Fusión x10</h2>
 <div class="galeria">
-<button onclick="cambiarImagen(-1)">⬅️</button>
 <img id="imagenSahumerio" src="largo1.jpg" width="200">
-<button onclick="cambiarImagen(1)">➡️</button> 
  <label for="aroma">Elegí tu aroma:</label>
 <select id="Aroma Fusión">
   <option> Bendición de Dinero</option> </option>
   <option> Frank y Mirra</option>
   <option> Rosa Roja</option>
 <p>Precio: $6500 </p>
-<button onclick="agregarSahumerio()">
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
 
  <div class="producto">
 <h2>Bombita de Defumación Sagrada Madre x4</h2>
@@ -118,12 +106,11 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  <option>Atrae Dinero</option>
  <option>Defumación Completa</option>
 </select>  
-<button onclick="agregarSahumerio()"> 
 <p>Precio: $2500</p>
  Agregar al carrito
 </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Conitos para Cascada de Humo x100</h2>
@@ -133,7 +120,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Sahumo Sagrada Madre</h2>
@@ -143,7 +130,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
 </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>7 Días de Limpieza Sagrada Madre </h2>
@@ -154,7 +141,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Palo Santo</h2>
@@ -164,7 +151,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
 </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Carbón Neutro Sagrada Madre x36 </h2>
@@ -175,7 +162,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
 </button>
 </div>
- <div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Velitas</h2>
@@ -189,13 +176,12 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
   <option>Palo Santo con Fresias</option>
   <option>Dulces Frutillas</option>
 </select>  
-<button onclick="agregarSahumerio()">
 <p>Precio: $2000</p>
 <button onclick="addToCart('Velitas', 2000)">
  Agregar al carrito
  </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Velitas de Noche x12 </h2>
@@ -205,7 +191,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
 </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto"> 
 <h2>Velón de Arcángeles </h2>
@@ -215,7 +201,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  Agregar al carrito
 </button>
 </div>
-<div id="cart-items"> </div>
+
 
 <div class="producto">
 <h2>Rocío Áurico Alquimia </h2>
@@ -228,12 +214,11 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
   <option>Prosperidad y Abundancia</option>
   <option>Regenerador de Aura</option>
 </select>  
-<button onclick="agregarSahumerio()">
 <p>Precio: $2500</p>
  Agregar al carrito
  </button>
 </div>
- <div id="cart-items"> </div>
+
 
 <div class="producto">
 <h2>Rocío Áurico Buena Energía </h2>
@@ -254,13 +239,11 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
   <option>Energía Angelical</option>
   <option>Prosperidad</option>
  <option>Armonizador de Chakras</option>
-</select>  
-<button onclick="agregarSahumerio()"> 
+</select>   
 <p>Precio: $3500</p>
  Agregar al carrito
 </button>
 </div>
- <div id="cart-items"> </div> 
 
 
 <div class="producto">
@@ -274,28 +257,26 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
   <option>Misterio Dorado</option>
   <option>Ritual de Oriente</option>
 </select>  
-<button onclick="agregarSahumerio()">
 <p>Precio: $12000 </p>
 <button onclick="addToCart('Aromatizante Aero Soft', 12000)">
  Agregar al carrito
  </button>
 </div>
 <div id="cart-items"> </div>
+
+Vaciar carrito 🗑️
+</button>
+<-- FINALIZAR COMPRA -->
+Finalizar compra por Instagram 📲
+</button>
+<a href="https://instagram.com/transformacionalquimica" target="_blank" class="btn-instagram">
+    📷 Comprar por Instagram
+</a> 
   
 <style>
 /* ===== CARRITO ===== */
 .cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
  <script> 
- <button onclick="clearCart()">
-Vaciar carrito 🗑️
-</button>
-<-- FINALIZAR COMPRA -->
-<button onclick="checkoutInstagram()">
-Finalizar compra por Instagram 📲
-</button>
-<a href="https://instagram.com/transformacionalquimica" target="_blank" class="btn-instagram">
-    📷 Comprar por Instagram
-</a>
 
 <style>
 .btn-instagram{display:inline-block;padding:12px 20px;text-decoration:none;border-radius:8px;background:#E1306C;color:white;font-weight:bold;}
@@ -304,4 +285,4 @@ Finalizar compra por Instagram 📲
 📷 Finalizar pedido por Instagram
 </button>  
  function renderCart() {const lista = document.getElementById("lista-carrito");const totalElemento = document.getElementById("total");const contador = document.getElementById("cart-count");let cart = JSON.parse(localStorage.getItem("cart")) || [];lista.innerHTML = "";let total = 0;cart.forEach((item, index) => {total += item.price;lista.innerHTML += `<li>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button></li>`;});totalElemento.textContent = total;contador.textContent = cart.length;} 
-function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.forEach(producto => {texto += `${producto.name} - $${producto.price}\n`;});
+function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.forEach(producto => {texto += `${producto.nombre} - $${producto.precio}\n`;});
