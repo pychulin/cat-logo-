@@ -110,7 +110,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 <img src="b9.jpg" width="200">
  <label for="aroma">Elegí tu aroma:</label>
 <select id="aroma">
-  <option> Abundancia Infinita</option></option>
+  <option>Abundancia Infinita</option></option>
   <option>Palo Santo con Copal</option>
   <option>Abre Caminos</option>
   <option>Atracción Mística</option>
@@ -303,6 +303,5 @@ Finalizar compra por Instagram 📲
 <button onclick="generarPedido()">
 📷 Finalizar pedido por Instagram
 </button>  
-let cart = JSON.parse (localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}</script>
-function generarPedido() {let texto = "Pedido:\n\n";carrito.forEach(producto => {texto += `${producto.nombre} - $${producto.precio}\n`;});texto += `\nTotal: $${document.getElementById("total").textContent}`;alert(texto);}
-function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}</script>
+ function renderCart() {const lista = document.getElementById("lista-carrito");const totalElemento = document.getElementById("total");const contador = document.getElementById("cart-count");let cart = JSON.parse(localStorage.getItem("cart")) || [];lista.innerHTML = "";let total = 0;cart.forEach((item, index) => {total += item.price;lista.innerHTML += `<li>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button></li>`;});totalElemento.textContent = total;contador.textContent = cart.length;} 
+function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.forEach(producto => {texto += `${producto.name} - $${producto.price}\n`;});
