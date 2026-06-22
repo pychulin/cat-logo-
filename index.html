@@ -6,10 +6,17 @@ let cart = [];function addToCart(nombre, precio) {cart.push({nombre: nombre,prec
 function toggleCart() {document.getElementById("cart").classList.toggle("open");document.getElementById("overlay").classList.toggle("show");} </script> 
 
 <header class="header">
-<h1>Mi Tienda</h1>
+<h1>Mi Tienda</h1>}
+<h3>Total: $<span id="total">0</span></h3>
+</div>
 <button onclick="toggleCart()" class="cart-btn">
 🛒 (<span id="cart-count">0</span>)
 </button>
+ <div id="carrito">
+ <h2>🛒 Carrito</h2>
+ <ul id="lista-carrito"> </ul>
+<h3>Total: $<span id="total">0</span></h3>
+</div>
 </header>
 <main class="grid">
  <div class="producto">
@@ -275,32 +282,17 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 </div>
 <div id="cart-items"> </div>
   
-<button onclick="clearCart()">
+<style>
+/* ===== CARRITO ===== */
+.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
+ <script> 
+ <button onclick="clearCart()">
 Vaciar carrito 🗑️
 </button>
 <-- FINALIZAR COMPRA -->
 <button onclick="checkoutInstagram()">
 Finalizar compra por Instagram 📲
-</button>
-<style>
-/* ===== CARRITO ===== */
-.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
-
-/* ===== FONDO OSCURO (OVERLAY) ===== */
-#overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);display: none;z-index: 998;}#overlay.show {display: block;} 
-
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Sahumerio Sagrada Madre x8 - " + aroma,3000)}
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Sahumerio Ámbar x20 - " + aroma,2000);}
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Aroma Fusión- " + aroma,6500);}
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Bombitas de Defumación Sagrada Madre x4- " + aroma,2500)
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Velitas- " + aroma,2000)
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Rocíp Áurico Alquimia - " + aroma,2500)
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Rocío Áurico Buena Energía - " + aroma,3500)
-function agregarSahumerio() {const aroma =document.getElementById("aroma").value;addToCart("Aromatizante Aero Soft - " + aroma,12000)
-
- 
- <script> 
-  
+</button> 
 let cart = JSON.parse (localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}</script>
 
 function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}</script>
